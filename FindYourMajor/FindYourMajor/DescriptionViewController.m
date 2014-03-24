@@ -55,9 +55,15 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSString *fieldLabel = self.description;
-	CGSize textSize = [fieldLabel sizeWithFont:[UIFont fontWithName:@"Georgia" size:17.0f] constrainedToSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-	float newHeight = textSize.height+22.0f;
+	UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+	NSString *fieldLabel = [cell textLabel].text;
+	
+	CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT);
+	CGRect textSize = [fieldLabel boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:17.0f]} context:nil];
+	float newHeight = textSize.size.height+22.0f;
+	if(indexPath.section == 0)
+		return newHeight+40;
+	
 	return newHeight;
 }
 

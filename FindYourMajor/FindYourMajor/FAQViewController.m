@@ -7,8 +7,11 @@
 //
 
 #import "FAQViewController.h"
+#import "AnswerViewController.h"
 
 @interface FAQViewController ()
+
+@property(strong) AnswerViewController *controller;
 
 @end
 
@@ -44,11 +47,25 @@
 	return [self.questions count];
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+	NSString* question = [cell textLabel].text;
+	
+	self.controller = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"answ"];
+	self.controller.question = question;
+	self.controller.answer = [self.answers objectAtIndex:indexPath.row];
+	
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.controller];
+	[self presentViewController:navController animated:YES completion:nil];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSString *fieldLabel = [self.questions objectAtIndex:indexPath.row];
-	CGSize textSize = [fieldLabel sizeWithFont:[UIFont fontWithName:@"Georgia" size:17.0f] constrainedToSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-	float newHeight = textSize.height+22.0f;
+	CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT);
+	CGRect textSize = [fieldLabel boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:17.0f]} context:nil];
+	float newHeight = textSize.size.height+22.0f;
 	return newHeight;
 }
 
@@ -65,4 +82,5 @@
 
 	[self.tableView reloadData];
 }
+
 @end

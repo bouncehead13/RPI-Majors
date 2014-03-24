@@ -25,6 +25,7 @@
 		C957ED5618A04005002FAA61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C957ED5418A04005002FAA61 /* InfoPlist.strings */; };
 		C957ED5818A04005002FAA61 /* FindYourMajorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C957ED5718A04005002FAA61 /* FindYourMajorTests.m */; };
 		C9961D6518A87DED00C06371 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9961D6418A87DED00C06371 /* InformationViewController.m */; };
+		C9CFFF2E18DFCA0200F0D51B /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CFFF2D18DFCA0200F0D51B /* AnswerViewController.m */; };
 		C9D52EDE18A9B025009155D6 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D52EDD18A9B025009155D6 /* GroupViewController.m */; };
 		C9D52EE018A9D3B4009155D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D52EDF18A9D3B4009155D6 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,8 @@
 		C957ED5718A04005002FAA61 /* FindYourMajorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindYourMajorTests.m; sourceTree = "<group>"; };
 		C9961D6318A87DED00C06371 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InformationViewController.h; path = ../InformationViewController.h; sourceTree = "<group>"; };
 		C9961D6418A87DED00C06371 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InformationViewController.m; path = ../InformationViewController.m; sourceTree = "<group>"; };
+		C9CFFF2C18DFCA0200F0D51B /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
+		C9CFFF2D18DFCA0200F0D51B /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
 		C9D52EDC18A9B025009155D6 /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		C9D52EDD18A9B025009155D6 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		C9D52EDF18A9D3B4009155D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				C931383018AB1912004C0D65 /* ContactsViewController.m */,
 				C931383218AB194D004C0D65 /* FAQViewController.h */,
 				C931383318AB194D004C0D65 /* FAQViewController.m */,
+				C9CFFF2C18DFCA0200F0D51B /* AnswerViewController.h */,
+				C9CFFF2D18DFCA0200F0D51B /* AnswerViewController.m */,
 			);
 			name = TabControllerViews;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				C957ED3A18A04005002FAA61 /* NoteCardAppDelegate.m in Sources */,
 				C931383418AB194D004C0D65 /* FAQViewController.m in Sources */,
 				C957ED3618A04005002FAA61 /* main.m in Sources */,
+				C9CFFF2E18DFCA0200F0D51B /* AnswerViewController.m in Sources */,
 				C91D0C7F18AACCEA00D8A6B1 /* DescriptionViewController.m in Sources */,
 				C957ED4018A04005002FAA61 /* MasterViewController.m in Sources */,
 				C957ED4318A04005002FAA61 /* DetailViewController.m in Sources */,

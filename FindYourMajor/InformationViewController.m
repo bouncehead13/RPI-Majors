@@ -20,7 +20,9 @@
 	UIAlertView *okayAlert;
 	NSURLConnection *connect;
 	NSDictionary *parsed;
+	BOOL loaded;
 }
+
 @end
 
 @implementation InformationViewController
@@ -35,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	loaded = NO;
 	views = [[NSArray alloc] initWithArray:[self viewControllers]];
 	[self setEdgesForExtendedLayout: UIRectEdgeNone];
 	alert = [[UIAlertView alloc] initWithTitle:@"Loading Data..." message:@"Please Wait" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
@@ -43,12 +46,16 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	NSString *urlString = [_detailItem stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-	urlString = [urlString stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
-	
-	NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat: @"http://findmajor.myrpi.org/scripts/index.php?major=%@", urlString]]];
-	connect = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-	[alert show];
+	if(loaded == NO)
+	{
+		NSString *urlString = [_detailItem stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		urlString = [urlString stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
+		
+		NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat: @"http://findmajor.myrpi.org/scripts/index.php?major=%@", urlString]]];
+		connect = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+		[alert show];
+		loaded = YES;
+	}
 }
 
 - (void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error
