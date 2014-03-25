@@ -60,6 +60,23 @@
 		return [self.names count];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+	UILabel*  email = (UILabel *)[cell viewWithTag:1];
+	NSString *subject = [[NSString alloc] initWithFormat:@"Interested in %@", self.major];
+	
+	MFMailComposeViewController *makeEmail = [[MFMailComposeViewController alloc] init];
+	[makeEmail setSubject:subject];
+	makeEmail.mailComposeDelegate = self;
+	[makeEmail setToRecipients:[NSArray arrayWithObjects:email.text, nil]];
+	[self presentViewController:makeEmail animated:YES completion:nil];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)addContacts:(NSDictionary*) dictionary withName:(NSString*)aName andEmail:(NSString*)aEmail
 {
 	if(!self.names) self.names = [[NSMutableArray alloc] init];

@@ -10,6 +10,7 @@
 		C91D0C7F18AACCEA00D8A6B1 /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91D0C7E18AACCEA00D8A6B1 /* DescriptionViewController.m */; };
 		C931383118AB1912004C0D65 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C931383018AB1912004C0D65 /* ContactsViewController.m */; };
 		C931383418AB194D004C0D65 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C931383318AB194D004C0D65 /* FAQViewController.m */; };
+		C932D78418E10DAD00E9F939 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932D78318E10DAD00E9F939 /* MessageUI.framework */; };
 		C957ED2A18A04005002FAA61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957ED2918A04005002FAA61 /* Foundation.framework */; };
 		C957ED2C18A04005002FAA61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957ED2B18A04005002FAA61 /* CoreGraphics.framework */; };
 		C957ED2E18A04005002FAA61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957ED2D18A04005002FAA61 /* UIKit.framework */; };
@@ -47,6 +48,7 @@
 		C931383018AB1912004C0D65 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		C931383218AB194D004C0D65 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
 		C931383318AB194D004C0D65 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		C932D78318E10DAD00E9F939 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C9470E1118AA030E00C9CE60 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C957ED2618A04005002FAA61 /* RPI Majors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPI Majors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C957ED2918A04005002FAA61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C932D78418E10DAD00E9F939 /* MessageUI.framework in Frameworks */,
 				C957ED2C18A04005002FAA61 /* CoreGraphics.framework in Frameworks */,
 				C957ED2E18A04005002FAA61 /* UIKit.framework in Frameworks */,
 				C957ED2A18A04005002FAA61 /* Foundation.framework in Frameworks */,
@@ -140,6 +143,7 @@
 		C957ED2818A04005002FAA61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C932D78318E10DAD00E9F939 /* MessageUI.framework */,
 				C9470E1118AA030E00C9CE60 /* libsqlite3.0.dylib */,
 				C957ED2918A04005002FAA61 /* Foundation.framework */,
 				C957ED2B18A04005002FAA61 /* CoreGraphics.framework */,

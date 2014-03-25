@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ContactsViewController : UITableViewController
+@interface ContactsViewController : UITableViewController<MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong) NSString *major;
 
 @property (strong) NSString *advisor;
 @property (strong) NSString *advisor_email;

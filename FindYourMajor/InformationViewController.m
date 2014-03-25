@@ -111,6 +111,7 @@
 - (void)initContacts
 {
 	ContactsViewController *contacts = [views objectAtIndex:1];
+	contacts.major = _detailItem;
 	NSDictionary *peers = [parsed objectForKey:@"contacts"];
 	
 	[contacts addContacts:peers withName:[parsed objectForKey:@"advisor"] andEmail:[parsed objectForKey:@"advisor_email"]];
