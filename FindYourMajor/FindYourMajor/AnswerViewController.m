@@ -20,8 +20,7 @@
     [super viewDidLoad];
 	[self.tableView reloadData];
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(cancelAction)];
-	self.navigationController.navigationBar.barTintColor = [UIColor redColor];
-	self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+	self.title = @"Question & Answer";
 }
 
 - (void)didReceiveMemoryWarning
