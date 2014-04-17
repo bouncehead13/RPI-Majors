@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UITableViewController
+@interface DetailViewController : UITableViewController<UISearchDisplayDelegate, UISearchBarDelegate>
 
 @property (strong, nonatomic) id detailItem;
 

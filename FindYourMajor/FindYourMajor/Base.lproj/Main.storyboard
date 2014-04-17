@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -223,6 +223,27 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="RCF-mm-cXd">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="search" textLabel="OFL-Fn-lc3" style="IBUITableViewCellStyleDefault" id="qNR-fp-Hqo">
+                                        <rect key="frame" x="0.0" y="511" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qNR-fp-Hqo" id="TDs-Ue-1uV">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OFL-Fn-lc3">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="pGg-6v-bdr" id="P41-gY-KXY"/>
@@ -233,6 +254,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="4MR-Gz-W7x" id="aAl-C6-E6l"/>
+                        <outlet property="tableView" destination="mLL-gJ-YKr" id="Ing-ha-tKh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -241,7 +263,7 @@
                         <outlet property="delegate" destination="pGg-6v-bdr" id="blu-Gy-azI"/>
                         <outlet property="searchBar" destination="QcJ-9h-hBk" id="Mrz-Et-6Kd"/>
                         <outlet property="searchContentsController" destination="pGg-6v-bdr" id="Kib-3I-XP9"/>
-                        <outlet property="searchResultsDataSource" destination="pGg-6v-bdr" id="r1U-Mh-wnr"/>
+                        <outlet property="searchResultsDataSource" destination="pGg-6v-bdr" id="HR2-vL-pLw"/>
                         <outlet property="searchResultsDelegate" destination="pGg-6v-bdr" id="LZI-NP-Pcw"/>
                     </connections>
                 </searchDisplayController>
@@ -858,7 +880,7 @@
         <!--Information View Controller - Information-->
         <scene sceneID="hDX-Oi-4ku">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="xOe-kw-e6G" customClass="InformationViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="InformationView" definesPresentationContext="YES" id="xOe-kw-e6G" customClass="InformationViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Information" id="t5W-y5-OtO"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
