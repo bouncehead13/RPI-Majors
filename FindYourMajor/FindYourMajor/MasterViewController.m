@@ -42,10 +42,10 @@
 								  @"Industrial & Management Engineering", @"Materials Engineering",
 								  @"Mechanical Engineering", @"Nuclear Engineering", nil]];
 	[searchData addObjectsFromArray:[NSArray arrayWithObjects:@"Cognitive Science", @"Communication",
-								  @"Design, Innovation & Society", @"Economics",
+								  @"Design, Innovation & Society",
 								  @"Electronics Arts", @"Electronic Media",
 								  @"Games & Simulation", @"Philosophy",
-								  @"Psychology", @"Science, Technology & Society",
+								  @"Science, Technology & Society",
 								  @"Sustainability Studies", nil]];
 	[searchData addObjectsFromArray:[NSArray arrayWithObjects:@"Arts", @"Civil Engineering",
 								  @"Cognitive Science", @"Communication",
