@@ -55,14 +55,21 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-	NSString *fieldLabel = [cell textLabel].text;
+	NSString *fieldLabel;
+	if(indexPath.section == 0)
+	{
+		fieldLabel = self.description;
+	}
+	else
+	{
+		fieldLabel = [self.courses objectAtIndex:indexPath.row];
+	}
 	
 	CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT);
 	CGRect textSize = [fieldLabel boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:17.0f]} context:nil];
 	float newHeight = textSize.size.height+22.0f;
 	if(indexPath.section == 0)
-		return newHeight+40;
+		newHeight += 5.5;
 	
 	return newHeight;
 }
