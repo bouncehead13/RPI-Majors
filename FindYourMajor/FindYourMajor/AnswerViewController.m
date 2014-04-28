@@ -65,7 +65,7 @@
 		fieldLabel = self.answer;
 	
 	CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT);
-	CGRect textSize = [fieldLabel boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:17.0f]} context:nil];
+	CGRect textSize = [fieldLabel boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:18.0f]} context:nil];
 	float newHeight = textSize.size.height+22.0f;
 	return newHeight;
 }

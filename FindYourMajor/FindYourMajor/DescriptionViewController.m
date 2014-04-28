@@ -66,10 +66,9 @@
 	}
 	
 	CGSize size = CGSizeMake([UIScreen mainScreen].bounds.size.width-20, MAXFLOAT);
-	CGRect textSize = [fieldLabel boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:17.0f]} context:nil];
+	CGRect textSize = [fieldLabel boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:18.0f]} context:nil];
 	float newHeight = textSize.size.height+22.0f;
-	if(indexPath.section == 0)
-		newHeight += 5.5;
+	if(newHeight > 200) newHeight += 15;
 	
 	return newHeight;
 }
